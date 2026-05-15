@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Comptable Connect met en relation des clients et des comptables partout dans le monde, avec rendez-vous, conformité et paiement en ligne."
+    />
+    <title>Comptable Connect — Trouvez un comptable en ligne</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navigation principale">
+        <a class="brand" href="#top" aria-label="Comptable Connect accueil">
+          <span class="brand__mark">CC</span>
+          <span>Comptable Connect</span>
+        </a>
+        <div class="navbar__links">
+          <a href="#services">Services</a>
+          <a href="#experts">Comptables</a>
+          <a href="#process">Fonctionnement</a>
+          <a href="#security">Confiance</a>
+        </div>
+        <a class="button button--ghost" href="#booking">Réserver</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero__content">
+          <p class="eyebrow">Plateforme 100% en ligne et internationale</p>
+          <h1>Le Doctolib des comptables, sans frontière.</h1>
+          <p class="hero__lead">
+            Mettez en relation des clients et des comptables certifiés, même
+            lorsqu'ils vivent dans deux pays différents. Recherche, rendez-vous,
+            documents et paiement se font au même endroit.
+          </p>
+          <div class="hero__actions">
+            <a class="button" href="#booking">Trouver un comptable</a>
+            <a class="button button--secondary" href="#join">Devenir comptable partenaire</a>
+          </div>
+          <dl class="hero__stats" aria-label="Indicateurs clés">
+            <div>
+              <dt>42</dt>
+              <dd>Pays couverts</dd>
+            </div>
+            <div>
+              <dt>24h</dt>
+              <dd>Créneau disponible</dd>
+            </div>
+            <div>
+              <dt>4,9/5</dt>
+              <dd>Satisfaction moyenne</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="search-card" aria-labelledby="search-title">
+          <h2 id="search-title">Rechercher un expert</h2>
+          <form id="booking" class="search-form">
+            <label>
+              Mon besoin
+              <select id="service-select" name="service">
+                <option value="creation">Création d'entreprise</option>
+                <option value="tax">Déclaration fiscale internationale</option>
+                <option value="payroll">Paie et RH à distance</option>
+                <option value="audit">Audit et conformité</option>
+              </select>
+            </label>
+            <label>
+              Pays du client
+              <select id="client-country" name="clientCountry">
+                <option>France</option>
+                <option>Canada</option>
+                <option>Sénégal</option>
+                <option>Belgique</option>
+                <option>Côte d'Ivoire</option>
+              </select>
+            </label>
+            <label>
+              Pays du comptable souhaité
+              <select id="accountant-country" name="accountantCountry">
+                <option>Peu importe</option>
+                <option>France</option>
+                <option>Canada</option>
+                <option>Maroc</option>
+                <option>Suisse</option>
+                <option>Luxembourg</option>
+              </select>
+            </label>
+            <button class="button" type="submit">Voir les disponibilités</button>
+          </form>
+          <p id="search-result" class="search-card__result" aria-live="polite"></p>
+        </aside>
+      </section>
+
+      <section id="services" class="section section--muted">
+        <div class="section__heading">
+          <p class="eyebrow">Tous les besoins comptables</p>
+          <h2>Des services adaptés aux entrepreneurs internationaux</h2>
+          <p>
+            Chaque prestation peut être réalisée à distance avec partage de
+            documents, visioconférence et suivi des obligations locales.
+          </p>
+        </div>
+        <div class="cards-grid">
+          <article class="feature-card">
+            <span class="feature-card__icon">🌍</span>
+            <h3>Fiscalité transfrontalière</h3>
+            <p>Comparez des experts qui maîtrisent les conventions fiscales, la TVA et les déclarations multi-pays.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon">📅</span>
+            <h3>Agenda en ligne</h3>
+            <p>Réservez un créneau selon votre fuseau horaire et recevez automatiquement le lien de visioconférence.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon">🔐</span>
+            <h3>Dossier sécurisé</h3>
+            <p>Centralisez bilans, justificatifs, contrats et factures dans un espace client chiffré.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon">💳</span>
+            <h3>Paiement international</h3>
+            <p>Affichez les tarifs en devise locale, acceptez le paiement en ligne et éditez une facture conforme.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experts" class="section experts-section">
+        <div class="section__heading">
+          <p class="eyebrow">Marketplace d'experts</p>
+          <h2>Comptables vérifiés, disponibles et notés</h2>
+        </div>
+        <div class="experts-list" id="experts-list" aria-live="polite"></div>
+      </section>
+
+      <section id="process" class="section section--split">
+        <div>
+          <p class="eyebrow">Comment ça marche</p>
+          <h2>Un parcours simple pour le client comme pour le comptable</h2>
+          <p>
+            La plateforme guide les deux parties depuis la qualification du
+            besoin jusqu'à la livraison de la mission comptable.
+          </p>
+        </div>
+        <ol class="steps">
+          <li>
+            <strong>1. Décrivez votre situation</strong>
+            <span>Pays de résidence, pays d'activité, statut, échéance et langue préférée.</span>
+          </li>
+          <li>
+            <strong>2. Comparez les profils</strong>
+            <span>Certifications, pays couverts, tarifs, avis, disponibilités et langues parlées.</span>
+          </li>
+          <li>
+            <strong>3. Réservez et collaborez</strong>
+            <span>Visio, messagerie, coffre-fort documentaire, signature électronique et suivi de mission.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section id="security" class="section trust-section">
+        <div class="trust-card">
+          <h2>Confiance, conformité et qualité</h2>
+          <p>
+            Les comptables renseignent leurs agréments, assurances et pays de
+            compétence. Les clients voient clairement les limites de chaque
+            intervention avant de réserver.
+          </p>
+          <ul>
+            <li>Vérification d'identité et des certifications professionnelles.</li>
+            <li>Contrats de mission signés en ligne avant toute prestation.</li>
+            <li>Historique complet des échanges et documents partagés.</li>
+            <li>Gestion des fuseaux horaires, devises et langues.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="join" class="section cta-section">
+        <div>
+          <p class="eyebrow">Pour les cabinets et indépendants</p>
+          <h2>Développez votre clientèle au-delà de votre pays.</h2>
+          <p>
+            Créez votre profil, indiquez vos zones de compétence et recevez des
+            demandes qualifiées de clients qui cherchent un accompagnement à distance.
+          </p>
+        </div>
+        <a class="button" href="mailto:partenaires@comptable-connect.example">Rejoindre la plateforme</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Comptable Connect. Prototype de marketplace comptable internationale.</p>
+      <a href="#top">Retour en haut</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
